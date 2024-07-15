@@ -1,15 +1,15 @@
-import serial
+# import serial
 import time
 from flask import Blueprint, request, jsonify
 import numpy as np
 import tensorflow as tf
 
 # Configura a porta serial e a taxa de baud
-ser = serial.Serial('/dev/cu.usbserial-14330', 9600)
+# ser = serial.Serial('/dev/cu.usbserial-14330', 9600)
 time.sleep(2)  # Aguarda a inicialização da comunicação serial
 
-def send_command(command):
-    ser.write(command.encode())
+# def send_command(command):
+    # ser.write(command.encode())
 
 # Carrega o modelo pré-treinado
 model = tf.keras.models.load_model("flaskr/model5.keras")
@@ -37,14 +37,14 @@ def process_images():
     print(results)
     
     # Envia o comando ao Arduino
-    if "good_blue" in results:
-        send_command('A')  # Comando para "good_blue"
-    elif "bad_blue" in results:
-        send_command('B')  # Comando para "bad_blue"
-    elif "good_red" in results:
-        send_command('C')  # Comando para "good_red"
-    elif "bad_red" in results:
-        send_command('D')  # Comando para "bad_red"
+    # if "good_blue" in results:
+    #     send_command('A')  # Comando para "good_blue"
+    # elif "bad_blue" in results:
+    #     send_command('B')  # Comando para "bad_blue"
+    # elif "good_red" in results:
+    #     send_command('C')  # Comando para "good_red"
+    # elif "bad_red" in results:
+    #     send_command('D')  # Comando para "bad_red"
     
     return jsonify(results)
 
