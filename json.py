@@ -1,12 +1,12 @@
 # import serial
-import time
+# import time
 from flask import Blueprint, request, jsonify
 import numpy as np
 import tensorflow as tf
 
 # Configura a porta serial e a taxa de baud
 # ser = serial.Serial('/dev/cu.usbserial-14330', 9600)
-time.sleep(2)  # Aguarda a inicialização da comunicação serial
+# time.sleep(2)  # Aguarda a inicialização da comunicação serial
 
 # def send_command(command):
     # ser.write(command.encode())
