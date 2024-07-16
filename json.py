@@ -3,6 +3,7 @@
 from flask import Blueprint, request, jsonify
 import numpy as np
 import tensorflow as tf
+import os
 
 # Configura a porta serial e a taxa de baud
 # ser = serial.Serial('/dev/cu.usbserial-14330', 9600)
@@ -52,4 +53,4 @@ if __name__ == '__main__':
     from flask import Flask
     app = Flask(__name__)
     app.register_blueprint(bp)
-    app.run(debug=True)
+    app.run(debug=True, port=int(os.environ.get('PORT', 5000)))

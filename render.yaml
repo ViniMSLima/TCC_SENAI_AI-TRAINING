@@ -1,0 +1,6 @@
+services:
+  - name: flask-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python __init__.py
+    port: 5000  # Defina a porta aqui conforme configurado no Flask
