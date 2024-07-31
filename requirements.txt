@@ -1,0 +1,7 @@
+flask
+Flask-SocketIO
+flask-cors
+opencv-python
+tensorflow
+socketio-client 
+numpy
