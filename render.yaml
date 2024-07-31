@@ -1,8 +1,0 @@
-# render.yaml
-
-services:
-  - name: flask-app
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn __init__:create_app
-    port: 8080  # Defina a porta conforme necessário
